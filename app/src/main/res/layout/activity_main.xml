@@ -6,14 +6,48 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity">
-
+    <ImageView
+            android:layout_width="68dp"
+            android:layout_height="64dp" app:srcCompat="@drawable/ic_umbrella" android:id="@+id/imageView4"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/button_getForecast" tools:srcCompat="@drawable/ic_umbrella"
+            app:layout_constraintStart_toEndOf="@+id/imageView" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toStartOf="@+id/imageView5"/>
+    <ImageView
+            android:layout_width="68dp"
+            android:layout_height="64dp" app:srcCompat="@drawable/ic_snowflake" android:id="@+id/imageView5"
+            app:layout_constraintTop_toTopOf="@+id/imageView4" tools:srcCompat="@drawable/ic_snowflake"
+            app:layout_constraintStart_toEndOf="@+id/imageView4" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toEndOf="parent"/>
     <TextView
+            android:text="@string/textView_weather"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello World!"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
-
+            android:id="@+id/textView" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="16dp" android:textSize="30sp" android:textStyle="bold"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="@string/textView_city"
+            android:ems="10"
+            android:id="@+id/editText"
+            android:layout_marginTop="20dp" app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+    />
+    <Button
+            android:text="@string/buttonText_forecast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_getForecast" android:layout_marginTop="15dp"
+            app:layout_constraintTop_toBottomOf="@+id/editText" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    <ImageView
+            android:layout_width="68dp"
+            android:layout_height="64dp" app:srcCompat="@drawable/ic_sunny" android:id="@+id/imageView"
+            app:layout_constraintTop_toTopOf="@+id/imageView4" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toStartOf="@+id/imageView4"
+            app:layout_constraintHorizontal_chainStyle="spread"/>
 </android.support.constraint.ConstraintLayout>
