@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity() {
 
         getForecast.setOnClickListener{
             var newIntent = Intent(this, ForecastActivity::class.java)
+            startActivity(newIntent)
         }
     }
 }
